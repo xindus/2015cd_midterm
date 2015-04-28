@@ -106,63 +106,9 @@ class Hello(object):
     <body onload="brython()">
         
     <form method=POST action=doCheck>
-    請輸入您所猜的整數:<input type=text name=guess><br />
-    <input type=submit value=send>
+    四設計二甲  40223115  吳欣融
     </form>
-    <hr>
-    <!-- 以下在網頁內嵌 Brython 程式 -->
-    <script type="text/python">
-    from browser import document, alert
 
-    def echo(ev):
-        alert(document["zone"].value)
-
-    # 將文件中名稱為 mybutton 的物件, 透過 click 事件與 echo 函式 bind 在一起
-    document['mybutton'].bind('click',echo)
-    </script>
-    <input id="zone"><button id="mybutton">click !</button>
-    <hr>
-    <!-- 以下為 canvas 畫圖程式 -->
-    <script type="text/python">
-    # 從 browser 導入 document
-    from browser import document
-    import math
-
-    # 畫布指定在名稱為 plotarea 的 canvas 上
-    # 以下使用中文變數名稱
-    畫布 = document["plotarea"]
-    ctx = 畫布.getContext("2d")
-
-    # 用紅色畫一條直線
-    ctx.beginPath()
-    ctx.lineWidth = 3
-    ctx.moveTo(0, 0)
-    ctx.lineTo(0, 500)
-    ctx.strokeStyle = "red"
-    ctx.stroke()
-
-    # 用藍色再畫一條直線
-    ctx.beginPath()
-    ctx.lineWidth = 3
-    ctx.moveTo(0, 0)
-    ctx.lineTo(500, 0)
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-
-    # 用綠色再畫一條直線
-    ctx.beginPath()
-    ctx.lineWidth = 3
-    ctx.moveTo(0, 0)
-    ctx.lineTo(500, 500)
-    ctx.strokeStyle = "green"
-    ctx.stroke()
-
-    # 用黑色畫一個圓
-    ctx.beginPath()
-    ctx.lineWidth = 3
-    ctx.strokeStyle = "black"
-    ctx.arc(250,250,50,0,2*math.pi)
-    ctx.stroke()
     </script>
     <canvas id="plotarea" width="800" height="600"></canvas>
     </body>
